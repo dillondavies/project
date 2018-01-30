@@ -1,0 +1,14 @@
+TransportError
+SerializationError
+RequestError
+ConnectionError
+__all__
+SSLError
+AuthorizationException
+HTTP_EXCEPTIONS
+ElasticsearchException
+NotFoundError
+ConnectionTimeout
+AuthenticationException
+ConflictError
+ImproperlyConfigured

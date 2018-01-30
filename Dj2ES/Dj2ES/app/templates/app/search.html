@@ -1,0 +1,25 @@
+﻿{% extends "app/layout.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<p>Search page goes here</p>
+
+    <form method="get" action="/search/">
+        Search papers: <input type="text" name="q" id="id_q" value="{{ query }}"/>
+        <input type="submit" value="Search" />
+    </form>
+
+
+      {% if search_string %}
+        <p>Search: {{ search_string }}</p>
+      {% endif %}
+
+{% block results %}{% endblock %}
+
+{% endblock %}

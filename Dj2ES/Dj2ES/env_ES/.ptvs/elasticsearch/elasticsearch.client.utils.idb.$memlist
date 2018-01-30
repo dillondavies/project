@@ -1,0 +1,15 @@
+datetime
+AddonClient
+weakref
+string_types
+unicode_literals
+GLOBAL_PARAMS
+PY2
+date
+quote_plus
+_escape
+SKIP_IN_PATH
+wraps
+query_params
+_make_path
+NamespacedClient

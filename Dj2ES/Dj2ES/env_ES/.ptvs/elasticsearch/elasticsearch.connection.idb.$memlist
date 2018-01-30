@@ -1,0 +1,8 @@
+pooling
+http_requests
+Urllib3HttpConnection
+Connection
+create_ssl_context
+http_urllib3
+base
+RequestsHttpConnection

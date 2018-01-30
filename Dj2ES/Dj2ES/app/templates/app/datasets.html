@@ -1,0 +1,22 @@
+﻿{% extends "app/layout.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<p> </p>
+    <form method="get" action="/indexChoice/">
+        Upload a new dataset<br />
+        Select one: <select name="cars">
+          <option value="newInd">Create a new index</option>
+          <option value="existingInd">Select an existing index</option>        
+        </select>
+        <input type="submit" value="Select" />
+    </form>
+
+
+
+{% endblock %}

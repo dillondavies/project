@@ -1,0 +1,36 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+ <div>
+
+
+     <div>
+         <p id="test_text">New crawl job</p>
+
+         <form action="/fs_upload/" method="post">
+            {% csrf_token %}
+             <table> {{ fs_form.as_table }} </table>
+
+            <input name="fs-submit" type="submit" value="Submit"/>
+
+        </form>
+    </div>
+
+    <div>
+         <p>New Conference</p>
+         <form action="/fs_upload/" method="post">
+            {% csrf_token %}
+
+             <table id="id_conf_table">{{ conf_form.as_table }}</table>
+        
+            <input name="conf-submit" type="submit" value="Submit"/>
+        </form>
+    </div>
+
+ </div>
+
+{% endblock %}

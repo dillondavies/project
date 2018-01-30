@@ -1,0 +1,27 @@
+{% extends "app/layout.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Multilingual Text-Search</h1>
+    <p class="lead">...</p>
+</div>
+
+<div class="row">
+    <form method="get" action="/search/">
+        Search for: <input type="text" name="q" id="id_q" value="{{ query }}"/>
+        <input type="submit" value="Search" />
+    </form>
+
+
+</div>
+
+      {% if search_string %}
+        <p>Search: {{ search_string }}</p>
+      {% endif %}
+
+{% block results %}{% endblock %}
+
+{% endblock %}

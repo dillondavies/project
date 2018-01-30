@@ -1,0 +1,24 @@
+﻿{% extends "app/search.html" %}
+
+{% block results %}
+
+<div>
+    <h2>Results</h2>
+    {%for element in paperList%}
+        Score: {{ element.score }}<br />
+        File ID: <a href="{% url 'view' %}?id={{ element.id }}">{{ element.id }}</a> <br />
+        {% if element.source.content.title %}Title: {{ element.source.content.title }}{% else %}No Title Recorded{% endif %}<br />
+        {% if element.source.content.author %}Author: {{ element.source.content.author }}{% else %}No Author Recorded{% endif %}<br />
+        {% if element.highlight.content %} Matches Found: {{element.highlight.content|length}}<br />
+            {% for match in element.highlight.content %}
+                "{{ match }}"<br /><br />
+            {%endfor%}
+        {% endif %}                
+
+        <br>
+    {% empty %} 
+        <p>No results found.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}
